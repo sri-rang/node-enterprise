@@ -4,10 +4,11 @@ building blocks for node in the enterprise
 
 ##### status: experimental
 
-##### services
+##### modules
 
 - identity-management
 - configuration-management
+- cli tools
 
 ### identity-management
 
@@ -32,3 +33,10 @@ building blocks for node in the enterprise
     - restful api
     - client library
     - data source
+
+### cli-tool
+
+- status: concept
+- feature set:
+    - manage config management instances
+    - manage identity management instances
