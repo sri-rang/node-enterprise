@@ -1,0 +1,31 @@
+{
+  "name": "enterprise",
+  "version": "1.0.0",
+  "description": "building blocks for node in the enterprise",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run tests"
+  },
+  "keywords": [
+    "enterprise",
+    "microservices",
+    "identity",
+    "management",
+    "feature",
+    "management",
+    "feature",
+    "flagging",
+    "feature",
+    "flags",
+    "authorization",
+    "authentication",
+    "audits",
+    "logging",
+    "a/b",
+    "testing",
+    "ab",
+    "testing"
+  ],
+  "author": "Sri <srirangan@gmail.com>",
+  "license": "MIT"
+}
