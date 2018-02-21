@@ -7,9 +7,10 @@
     "microservices",
     "security",
     "identity",
+    "configuration",
+    "config",
     "management",
     "feature",
-    "management",
     "feature",
     "flagging",
     "feature",
@@ -24,5 +25,8 @@
     "testing"
   ],
   "author": "Sri <srirangan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "8.9"
+  }
 }
