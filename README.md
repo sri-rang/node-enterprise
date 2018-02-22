@@ -7,7 +7,7 @@ building blocks for node in the enterprise
 ##### modules
 
 - identity-management
-- configuration-management
+- config-management
 - cli tools
 
 ### identity-management
@@ -22,13 +22,13 @@ building blocks for node in the enterprise
     - client library
     - data source
 
-### configuration-management
+### config-management
 
 - status: concept
 - feature set:
-    - ui for adding, deleting and toggling configurations
-    - support for multiple configuration types
-    - support for nested configurations
+    - ui for adding, deleting and toggling configs
+    - support for multiple config types
+    - support for nested configs
 - integration channels:
     - restful api
     - client library

@@ -28,5 +28,9 @@
   "license": "MIT",
   "engines": {
     "node": "8.9"
+  },
+  "scripts": {
+    "test": "npm run test-config-management",
+    "test-config-management": "node config-management/tests/test_lib.js"
   }
 }

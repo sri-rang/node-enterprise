@@ -13,7 +13,7 @@ const initialize = (path, value) => {
 };
 
 const proceed_if_initialized = () => {
-    if (!path_data_source || !data_source) throw new Error('configuration not initialized');
+    if (!path_data_source || !data_source) throw new Error('config-management not initialized');
 };
 
 const get = name => {
