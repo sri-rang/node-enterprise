@@ -1,6 +1,8 @@
 const fs = require('fs');
 const helpers = require('./helpers');
 
+const EMPTY_DATA_SOURCE = {};
+
 let path_data_source = null;
 let data_source = null;
 
@@ -33,8 +35,8 @@ const add = (name, value) => {
 const remove = name => {
     proceed_if_initialized();
     if (!name) {
-        data_source = {};
-        save('{}');
+        data_source = EMPTY_DATA_SOURCE;
+        save(JSON.stringify(data_source));
     }
     const context = helpers.get_context(name, data_source);
     context[helpers.get_tail_name(name)] = null;
