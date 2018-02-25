@@ -2,41 +2,37 @@
 
 building blocks for node in the enterprise
 
-##### status: experimental
+## roadmap
 
-##### modules
+- **1.0.0**
+    - concept and kickoff
 
-- identity-management
-- config-management
-- cli tools
+- 2.0.0
+    - config-management
+        - library
+        - restful service
+        - web console
 
-### identity-management
+- 3.0.0
+    - identity management
+        - library
+        - restful service
+        - web console
+        - auth provider integrations
 
-- status: concept
-- feature set:
-    - ui for adding, deleting and modifying users
-    - ui for adding, deleting and modifying roles
-    - ui for managing user's roles
-- integration channels:
-    - restful api
-    - client library
-    - data source
+- 4.0.0
+    - cli tool
+    - public website
+    - docs
 
-### config-management
+- 5.0.0
+    - long term stable release
+    - support services
 
-- status: concept
-- feature set:
-    - ui for adding, deleting and toggling configs
-    - support for multiple config types
-    - support for nested configs
-- integration channels:
-    - restful api
-    - client library
-    - data source
+## license
 
-### cli-tool
+MIT
 
-- status: concept
-- feature set:
-    - manage config management instances
-    - manage identity management instances
+## author
+
+- Sri <srirangan@gmail.com> http://srirangan.net
