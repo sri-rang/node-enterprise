@@ -1,0 +1,23 @@
+GET http://localhost:3000
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:3000/hello
+Cache-Control: no-cache
+
+World
+
+###
+
+DELETE http://localhost:3000/favicon
+Cache-Control: no-cache
+
+###
+
+PUT http://localhost:3000/foo.bar.she
+Cache-Control: no-cache
+
+Sells
+
+###
