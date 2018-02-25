@@ -34,7 +34,7 @@
     "config-management:test": "npm run config-management:test_lib && npm run config-management:test_server",
     "config-management:test_lib": "node config-management/tests/test_lib.js",
     "config-management:test_server": "node config-management/tests/test_server.js",
-    "config-management:run_server": "node config-management/server/run.js"
+    "config-management:run_server": "PORT=3000 HOST=127.0.0.1 DATA_SOURCE_PATH=/tmp/config_management_dev.json node config-management/server/run.js"
   },
   "devDependencies": {
     "node-fetch": "2.0.0"
