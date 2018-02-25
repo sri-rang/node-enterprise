@@ -1,5 +1,6 @@
-const fetch = require('node-fetch');
 const assert = require('assert');
+const fs = require('fs');
+const fetch = require('node-fetch');
 const config_management = require('../lib');
 const server = require('../server/server');
 
@@ -15,7 +16,10 @@ const reset_timeout = () => {
     reset_timeout.timer = setTimeout(() => process.exit(0), 500);
 };
 
-config_management.initialize('/tmp/config_management_test_server.json', {});
+const data_source_path = '/tmp/config_management_test_server.json';
+fs.existsSync(data_source_path) && fs.unlinkSync(data_source_path);
+
+config_management.initialize(data_source_path, {});
 const instance = server(config_management);
 
 instance.listen(3000, () => {
