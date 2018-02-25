@@ -22,7 +22,7 @@ const get = name => {
     proceed_if_initialized();
     if (!name) return data_source;
     const context = helpers.get_context(name, data_source);
-    return context[helpers.get_tail_name(name)];
+    return context[helpers.get_tail_name(name)] || null;
 };
 
 const add = (name, value) => {
@@ -30,6 +30,7 @@ const add = (name, value) => {
     const context = helpers.get_context(name, data_source);
     context[helpers.get_tail_name(name)] = value;
     save(JSON.stringify(data_source));
+    return true;
 };
 
 const remove = name => {
@@ -41,6 +42,7 @@ const remove = name => {
     const context = helpers.get_context(name, data_source);
     context[helpers.get_tail_name(name)] = null;
     save(JSON.stringify(data_source));
+    return true;
 };
 
 module.exports = { initialize, add, remove, get };

@@ -2,7 +2,7 @@ const assert = require('assert');
 const config_management = require('../lib');
 
 const should_initialize_data_source = () => {
-    config_management.initialize('/tmp/test_data.json', {});
+    config_management.initialize('/tmp/config_management_test.json', {});
     const actual = JSON.stringify(config_management.get());
     const expected = '{}';
     assert(actual === expected);
