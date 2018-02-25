@@ -38,9 +38,7 @@ const add = (name, value) => {
 
 const remove = name => {
     proceed_if_initialized();
-    if (!name) {
-        data_source = EMPTY_DATA_SOURCE;
-    }
+    if (!name) data_source = EMPTY_DATA_SOURCE;
     else {
         const context = helpers.get_context(name, data_source);
         context[helpers.get_tail_name(name)] = null;

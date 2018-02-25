@@ -10,8 +10,6 @@ const get_context = (name, context) => {
     else return context;
 };
 
-const get_tail_name = (name) => {
-    return name.split('.').slice(-1);
-};
+const get_tail_name = name => name.split('.').slice(-1);
 
 module.exports = { get_context, get_tail_name };
