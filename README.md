@@ -4,30 +4,20 @@ building blocks for node in the enterprise
 
 ## roadmap
 
-- **1.0.0**
-    - concept and kickoff
-
-- 2.0.0
-    - config-management
-        - library
-        - restful service
-        - web console
-
-- 3.0.0
-    - identity management
-        - library
-        - restful service
-        - web console
-        - auth provider integrations
-
-- 4.0.0
-    - cli tool
-    - public website
+- ✔ **concept and kickoff**
+- **config-management**
+    - ✔ **library**
+    - ✔ **restful service**
+    - *web console*
+- auth management
+    - library
+    - restful service
+    - web console
+- cli tool
+- public website
     - docs
-
-- 5.0.0
-    - long term stable release
-    - support services
+- support plans
+- long term stable release
 
 ## license
 
@@ -35,4 +25,4 @@ MIT
 
 ## author
 
-- Sri <srirangan@gmail.com> http://srirangan.net
+- [Sri](http://srirangan.net) <[srirangan@gmail.com](srirangan@gmail.com)>
