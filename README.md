@@ -9,7 +9,7 @@ building blocks for node in the enterprise
     - ✔ **library**
     - ✔ **restful service**
     - *web console*
-- auth management
+- role management
     - library
     - restful service
     - web console
