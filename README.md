@@ -6,11 +6,11 @@ building blocks for node in the enterprise
 
 - ✔ **concept and kickoff**
 - **config-management**
-    - ✔ **library**
+    - ✔ **core**
     - ✔ **restful service**
     - *web console*
 - role management
-    - library
+    - core
     - restful service
     - web console
 - cli tool
