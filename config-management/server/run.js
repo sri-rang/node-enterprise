@@ -1,5 +1,5 @@
 const server = require('./server');
-const config_management = require('../lib');
+const config_management = require('../core');
 
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || '0.0.0.0';

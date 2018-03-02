@@ -1,6 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
-const config_management = require('../lib');
+const config_management = require('../core');
 
 const data_source_path = '/tmp/config_management_test_lib.json';
 fs.existsSync(data_source_path) && fs.unlinkSync(data_source_path);
