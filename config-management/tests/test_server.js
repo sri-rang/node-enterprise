@@ -2,7 +2,7 @@ const assert = require('assert');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const config_management = require('../core');
-const server = require('../server/server');
+const server = require('../rest-api/server');
 
 let body;
 const failed = message => {
