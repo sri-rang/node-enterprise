@@ -1,22 +1,24 @@
 const fs = require('fs');
 
+const encoding = 'utf-8';
+
 class JsonStore {
     constructor(path) {
         this._path = path;
-        if (!fs.existsSync(this._path)) fs.writeFileSync(this._path, '{}', 'utf-8');
-        this._data_source = require(this._path);
+        if (!fs.existsSync(this._path)) {
+            fs.writeFileSync(this._path, '{}', encoding);
+        }
     }
 
-    save(data_source) {
-        fs.writeFileSync(this._path, JSON.stringify(data_source), 'utf-8');
-        this._data_source = data_source;
+    save(data) {
+        fs.writeFileSync(this._path, JSON.stringify(data), encoding);
     }
 
     get() {
-        return this._data_source;
+        return JSON.parse(fs.readFileSync(this._path, encoding));
     }
 
-    delete() {
+    remove() {
         fs.unlinkSync(this._path);
     }
 }

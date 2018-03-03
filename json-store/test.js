@@ -16,7 +16,7 @@ const should_save_and_get = () => {
 };
 
 const should_delete = () => {
-    test_store.delete();
+    test_store.remove();
     assert(!fs.existsSync(path));
 };
 
