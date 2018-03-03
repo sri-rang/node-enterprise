@@ -5,6 +5,8 @@ building blocks for node in the enterprise
 ## roadmap
 
 - ✔ **concept and kickoff**
+- ✔ **json-store**
+    - ✔ **core**
 - **config-management**
     - ✔ **core**
     - ✔ **restful service**
