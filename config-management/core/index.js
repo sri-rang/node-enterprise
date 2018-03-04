@@ -3,9 +3,7 @@ const helpers = require('./helpers');
 
 let store = null;
 
-const initialize = (path, initial_value) => {
-    store = new JsonStore(path, initial_value);
-};
+const initialize = (path, initial_value) => store = new JsonStore(path, initial_value);
 
 const proceed_if_initialized = () => {
     if (!store) throw new Error('config-management not initialized');
