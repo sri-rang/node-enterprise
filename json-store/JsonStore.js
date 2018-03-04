@@ -3,10 +3,10 @@ const fs = require('fs');
 const encoding = 'utf-8';
 
 class JsonStore {
-    constructor(path) {
+    constructor(path, data = {}) {
         this._path = path;
         if (!fs.existsSync(this._path)) {
-            fs.writeFileSync(this._path, '{}', encoding);
+            fs.writeFileSync(this._path, JSON.stringify(data), encoding);
         }
     }
 
