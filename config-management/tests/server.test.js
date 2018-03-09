@@ -15,7 +15,7 @@ describe('config-management - server', () => {
 
     test('wait for server to instantiate', done => {
         instance.listen(3000);
-        setTimeout(() => done(), 1000);
+        setTimeout(() => done(), 0);
     });
 
     test('should initialize', () => {
@@ -28,7 +28,7 @@ describe('config-management - server', () => {
         expect.assertions(1);
         return fetch('http://localhost:3000/hello', { method: 'post', body: 'world' })
             .then(res => res.json())
-            .then(body => expect(body).toBeDefined());
+            .then(body => expect(body).toBe(true));
     });
     test('should get hello', () => {
         expect.assertions(1);
@@ -40,19 +40,19 @@ describe('config-management - server', () => {
         expect.assertions(1);
         return fetch('http://localhost:3000/foo', { method: 'put', body: 'bar' })
             .then(res => res.json())
-            .then(body => expect(body).toBeDefined());
+            .then(body => expect(body).toBe(true));
     });
     test('should delete foo', () => {
         expect.assertions(1);
         return fetch('http://localhost:3000/foo', { method: 'delete' })
             .then(res => res.json())
-            .then(body => expect(body).toBeDefined());
+            .then(body => expect(body).toBe(true));
     });
     test('should post hello.world.foo', () => {
         expect.assertions(1);
         return fetch('http://localhost:3000/she.sells.sea', { method: 'post', body: 'shells' })
             .then(res => res.json())
-            .then(body => expect(body).toBeDefined());
+            .then(body => expect(body).toBe(true));
     });
     test('should get all', () => {
         expect.assertions(1);
