@@ -1,3 +1,5 @@
+/* global describe, test, expect */
+
 const assert = require('assert');
 const fs = require('fs');
 const JsonStore = require('./JsonStore');
@@ -5,29 +7,26 @@ const JsonStore = require('./JsonStore');
 let test_store;
 const path = '/tmp/test_store.json';
 
-const should_initialize = () => {
-    test_store = new JsonStore(path);
-    assert(fs.existsSync(path));
-};
+describe('json-store', () => {
+    test('should initialize', () => {
+        test_store = new JsonStore(path);
+        expect(fs.existsSync(path)).toBe(true);
+    });
 
-const should_save_and_get = () => {
-    test_store.save({ hello: 'world' });
-    assert(test_store.get().hello === 'world');
-};
+    test('should save and get', () => {
+        test_store.save({ hello: 'world' });
+        expect(test_store.get().hello).toBe('world');
+    });
 
-const should_delete = () => {
-    test_store.remove();
-    assert(!fs.existsSync(path));
-};
+    test('should delete', () => {
+        test_store.remove();
+        expect(fs.existsSync(path)).toBe(false);
+    });
 
-const should_initialize_with_source = () => {
-    should_initialize();
-    should_save_and_get();
-    const test_store_2 = new JsonStore(path);
-    assert(test_store_2.get().hello === 'world');
-};
-
-should_initialize();
-should_save_and_get();
-should_delete();
-should_initialize_with_source();
+    test('should initialize with source', () => {
+        test_store = new JsonStore(path);
+        test_store.save({ hello: 'world' });
+        const test_store_2 = new JsonStore(path);
+        expect(test_store_2.get().hello).toBe('world');
+    });
+});
