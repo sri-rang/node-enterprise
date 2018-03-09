@@ -11,8 +11,8 @@ building blocks for node in the enterprise
     - ✔ **core**
     - ✔ **restful service**
     - *web console*
-- role management
-    - core
+- **role management**
+    - ✔ **core**
     - restful service
     - web console
 - cli tool
