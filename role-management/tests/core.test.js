@@ -9,27 +9,27 @@ fs.existsSync(data_source_path) && fs.unlinkSync(data_source_path);
 describe('role-management - core', () => {
     test('should initialize data source', () => {
         role_management.initialize(data_source_path);
-        expect(role_management.get()).toEqual([]);
+        expect(role_management.get()).toEqual({});
     });
 
     test('should add roles for new user', () => {
-        role_management.add('user_1', ['a', 'b', 'c']);
-        expect(role_management.get('user_1')).toEqual(['a', 'b', 'c']);
+        role_management.add('user_1', ['admin', 'user']);
+        expect(role_management.get('user_1')).toEqual(['admin', 'user']);
     });
 
     test('should add roles for existing user', () => {
-        role_management.add('user_1', ['d', 'e']);
-        expect(role_management.get('user_1')).toEqual(['a', 'b', 'c', 'd', 'e']);
+        role_management.add('user_1', ['manager']);
+        expect(role_management.get('user_1')).toEqual(['admin', 'user', 'manager']);
     });
 
     test('should not add duplicate roles', () => {
-        role_management.add('user_1', ['d', 'e']);
-        expect(role_management.get('user_1')).toEqual(['a', 'b', 'c', 'd', 'e']);
+        role_management.add('user_1', ['manager']);
+        expect(role_management.get('user_1')).toEqual(['admin', 'user', 'manager']);
     });
 
     test('should remove roles', () => {
-        role_management.remove('user_1', ['b', 'c']);
-        expect(role_management.get('user_1')).toEqual(['a', 'd', 'e']);
+        role_management.remove('user_1', ['user', 'manager']);
+        expect(role_management.get('user_1')).toEqual(['admin']);
     });
 
     test('should get empty set for new user', () => {
@@ -39,5 +39,9 @@ describe('role-management - core', () => {
     test('should not fail when removing roles from unknown user', () => {
         role_management.remove('user_2', ['b', 'c']);
         expect(role_management.get('user_2')).toEqual([]);
+    });
+
+    test('should get all users and roles', () => {
+        expect(role_management.get()).toEqual({ user_1: ['admin'], user_2: [] });
     });
 });

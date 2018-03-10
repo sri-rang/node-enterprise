@@ -10,7 +10,8 @@ const initialize = path => store = new JsonStore(path);
 
 const get = user => {
     proceed_if_initialized();
-    return store.get()[user] || [];
+    const all = store.get();
+    return user ? all[user] || [] : all;
 };
 
 const add = (user, roles) => {
