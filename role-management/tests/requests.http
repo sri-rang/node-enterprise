@@ -1,0 +1,23 @@
+GET http://localhost:3000
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:3000/user_1
+Cache-Control: no-cache
+
+["admin", "user"]
+
+###
+
+POST http://localhost:3000/user_2
+Cache-Control: no-cache
+
+["user"]
+
+###
+
+DELETE http://localhost:3000/user_1
+Cache-Control: no-cache
+
+###

@@ -16,10 +16,11 @@ const get = user => {
 
 const add = (user, roles) => {
     proceed_if_initialized();
+    if (!user) return;
     const data = store.get();
     const existing_roles = data[user] || [];
     const set = new Set(existing_roles);
-    roles.forEach(role => set.add(role));
+    Array.isArray(roles) && roles.forEach(role => set.add(role));
     data[user] = Array.from(set);
     store.save(data);
 };
